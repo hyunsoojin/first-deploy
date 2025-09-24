@@ -342,7 +342,7 @@ const AwardDate = styled.div`
   font-size: 0.9rem;
 `;
 
-export default function Resume() {
+function Resume() {
   
   const [name, setName] = useState<string>("");
   const [subtitle, setSubtitle] = useState<string>("");
@@ -485,3 +485,5 @@ export default function Resume() {
     
   );
 }
+
+export default Resume;
