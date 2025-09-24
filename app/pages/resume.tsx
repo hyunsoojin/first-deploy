@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useEffect } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import axios from "axios";
-import { userInfo } from "os";
 
 // Global Styles
 const GlobalStyle = createGlobalStyle`
@@ -346,12 +345,12 @@ const AwardDate = styled.div`
 export default function Resume() {
   
   const [name, setName] = useState<string>("");
+  const [subtitle, setSubtitle] = useState<string>("");
   const [experienceData, setExperienceData] = useState<any[]>([]);
   const [skillsData, setSkillsData] = useState<string[]>([]);
   const [awardsData, setAwardsData] = useState<any[]>([]);
   const [email, setEmail] = useState<string>("");
   const [github, setGithub] = useState<string>("");
-  const [userInfo, setUserInfo] = useState<string>("");
   const [educationData, setEducationData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -364,12 +363,12 @@ export default function Resume() {
         const data = res.data; // JSON.parse() 제거
         console.log(data);
         setName(data.name || "");
+        setSubtitle(data.subtitle || "");
         setExperienceData(data.experienceData || []);
         setSkillsData(data.skillsData || []);
         setAwardsData(data.awardsData || []);
         setEmail(data.email || "");
         setGithub(data.github || "");
-        setUserInfo(data.userinfo || "");
         setEducationData(data.educationData || []);
       })
       .catch((error) => {
@@ -387,7 +386,7 @@ export default function Resume() {
           {/* Header */}
           <Header>
             <MainTitle>{name}</MainTitle>
-            <Subtitle>안정적인 웹 서비스를 개발하는 백엔드 개발자</Subtitle>
+            <Subtitle>{subtitle}</Subtitle>
             <ContactLinks>
               <ContactLink href={`mailto:${email}`}>📧 Email</ContactLink>
               <ContactLink href={`${github}`} target="_blank">💻 GitHub</ContactLink>
@@ -400,7 +399,9 @@ export default function Resume() {
             <Section>
               <SectionTitle>About Me</SectionTitle>
               <IntroText>
-                {userInfo}
+                운영, 개발 모든 요소에 있어서 가리지 않고 최선을 다하는 개발자입니다.<br/>
+                기술적으로 부족한 부분에 대해서 스터디와 교육과정 이수, 온라인 강의 등을 통해<br/>
+                기술력을 높이는 데에도 힘쓰고 있습니다.
               </IntroText>
             </Section>
 
