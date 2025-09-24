@@ -1,5 +1,11 @@
 {
   "name": "jinny",
+  "subtitle": "안정적인 웹 서비스를 개발하는 백엔드 개발자",
+  "email": "jhs7251@naver.com",
+  "github": "https://github.com/hyunsoojin",
+  "userinfo" : "운영, 개발 모든 요소에 있어서 가리지 않고 최선을 다하는 개발자입니다.<br />
+                기술적으로 부족한 부분에 대해서 스터디와 교육과정 이수, 온라인 강의 등을 통해<br />
+                기술력을 높이는 데에도 힘쓰고 있습니다.",
   "experienceData": [
     {
       "company": "효성ITX",
@@ -62,6 +68,13 @@
     {
       "title": "졸업작품 학술상",
       "date": "2019.10 - 도서위치 인식 및 운송로봇"
+    }
+  ],
+  "educationData": [
+    {
+      "title" : "한국기술교육대학교",
+      "department" : "전자공학과 졸업 (2014.03 - 2020.02)",
+      "details" : "졸업작품(도서위치 인식 및 운송 로봇)으로 학술상 수상"
     }
   ]
 }

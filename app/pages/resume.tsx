@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import axios from "axios";
+import { userInfo } from "os";
 
 // Global Styles
 const GlobalStyle = createGlobalStyle`
@@ -348,8 +349,11 @@ export default function Resume() {
   const [experienceData, setExperienceData] = useState<any[]>([]);
   const [skillsData, setSkillsData] = useState<string[]>([]);
   const [awardsData, setAwardsData] = useState<any[]>([]);
+  const [email, setEmail] = useState<string>("");
+  const [github, setGithub] = useState<string>("");
+  const [userInfo, setUserInfo] = useState<string>("");
+  const [educationData, setEducationData] = useState<any[]>([]);
 
-  
   useEffect(() => {
     axios
       .get(
@@ -357,12 +361,16 @@ export default function Resume() {
       )
       .then((res) => {
         console.log(res.data);
-        const data = JSON.parse(res.data);
+        const data = res.data; // JSON.parse() 제거
         console.log(data);
         setName(data.name || "");
         setExperienceData(data.experienceData || []);
         setSkillsData(data.skillsData || []);
         setAwardsData(data.awardsData || []);
+        setEmail(data.email || "");
+        setGithub(data.github || "");
+        setUserInfo(data.userinfo || "");
+        setEducationData(data.educationData || []);
       })
       .catch((error) => {
         console.error("Error fetching resume data:", error);
@@ -381,8 +389,8 @@ export default function Resume() {
             <MainTitle>{name}</MainTitle>
             <Subtitle>안정적인 웹 서비스를 개발하는 백엔드 개발자</Subtitle>
             <ContactLinks>
-              <ContactLink href="mailto:jhs7251@naver.com">📧 Email</ContactLink>
-              <ContactLink href="https://github.com/hyunsoojin" target="_blank">💻 GitHub</ContactLink>
+              <ContactLink href={`mailto:${email}`}>📧 Email</ContactLink>
+              <ContactLink href={`${github}`} target="_blank">💻 GitHub</ContactLink>
             </ContactLinks>
           </Header>
 
@@ -392,9 +400,7 @@ export default function Resume() {
             <Section>
               <SectionTitle>About Me</SectionTitle>
               <IntroText>
-                운영, 개발 모든 요소에 있어서 가리지 않고 최선을 다하는 개발자입니다.<br />
-                기술적으로 부족한 부분에 대해서 스터디와 교육과정 이수, 온라인 강의 등을 통해<br />
-                기술력을 높이는 데에도 힘쓰고 있습니다.
+                {userInfo}
               </IntroText>
             </Section>
 
@@ -450,14 +456,16 @@ export default function Resume() {
             </Section>
 
             {/* Education Section */}
-            <Section>
-              <SectionTitle>Education</SectionTitle>
-              <EducationItem>
-                <EducationTitle>한국기술교육대학교</EducationTitle>
-                <EducationDetails>전자공학과 졸업 (2014.03 - 2020.02)</EducationDetails>
-                <EducationDetails>졸업작품(도서위치 인식 및 운송 로봇)으로 학술상 수상</EducationDetails>
-              </EducationItem>
-            </Section>
+            {educationData.map((edu) => (
+                <Section>
+                    <SectionTitle>Education</SectionTitle>
+                    <EducationItem>
+                        <EducationTitle>{edu.title}</EducationTitle>
+                        <EducationDetails>{edu.department}</EducationDetails>
+                        <EducationDetails>{edu.details}</EducationDetails>
+                    </EducationItem>
+                </Section>
+            ))}
 
             {/* Awards & Certifications Section */}
             <Section>
