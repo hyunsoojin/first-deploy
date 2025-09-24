@@ -360,7 +360,7 @@ export default function Resume() {
       )
       .then((res) => {
         console.log(res.data);
-        const data = res.data; // JSON.parse() 제거
+        const data = res.data; // JSON.parse() 제거 - axios가 이미 파싱함
         console.log(data);
         setName(data.name || "");
         setSubtitle(data.subtitle || "");
