@@ -5,6 +5,33 @@ import { useState, useEffect } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import axios from "axios";
 
+// 타입 정의
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+}
+
+interface Experience {
+  company: string;
+  title: string;
+  duration: string;
+  projects?: Project[];
+  description?: string;
+  tags?: string[];
+}
+
+interface Award {
+  title: string;
+  date: string;
+}
+
+interface Education {
+  title: string;
+  department: string;
+  details: string;
+}
+
 // Global Styles
 const GlobalStyle = createGlobalStyle`
   * {
@@ -346,12 +373,12 @@ function Resume() {
   
   const [name, setName] = useState<string>("");
   const [subtitle, setSubtitle] = useState<string>("");
-  const [experienceData, setExperienceData] = useState<any[]>([]);
+  const [experienceData, setExperienceData] = useState<Experience[]>([]);
   const [skillsData, setSkillsData] = useState<string[]>([]);
-  const [awardsData, setAwardsData] = useState<any[]>([]);
+  const [awardsData, setAwardsData] = useState<Award[]>([]);
   const [email, setEmail] = useState<string>("");
   const [github, setGithub] = useState<string>("");
-  const [educationData, setEducationData] = useState<any[]>([]);
+  const [educationData, setEducationData] = useState<Education[]>([]);
 
   useEffect(() => {
     axios
@@ -436,7 +463,7 @@ function Resume() {
                     <>
                       <ProjectDescription>{exp.description}</ProjectDescription>
                       <TechTags>
-                        {exp.tags.map((tag, tIndex) => (
+                        {exp.tags?.map((tag, tIndex) => (
                           <TechTag key={tIndex}>{tag}</TechTag>
                         ))}
                       </TechTags>
