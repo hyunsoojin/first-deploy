@@ -457,8 +457,8 @@ export default function Resume() {
             </Section>
 
             {/* Education Section */}
-            {educationData.map((edu) => (
-                <Section>
+            {educationData.map((edu, index) => (
+                <Section key={index}>
                     <SectionTitle>Education</SectionTitle>
                     <EducationItem>
                         <EducationTitle>{edu.title}</EducationTitle>
