@@ -1,67 +1,67 @@
 {
   "name": "jinny",
-  "experienceData" : [
+  "experienceData": [
     {
-      company: "효성ITX",
-      title: "웹 개발자 선임",
-      duration: "2021.09 - 2025.02 (3년 6개월)",
-      projects: [
+      "company": "효성ITX",
+      "title": "웹 개발자 선임",
+      "duration": "2021.09 - 2025.02 (3년 6개월)",
+      "projects": [
         {
-          title: "다국어 기능 도입 (2024.09 - 2024.12)",
-          description: "기존 시스템에 다국어 기능을 제공하기 위한 사전 조사 및 테이블 설계, 다국어 데이터 저장을 위한 화면 구성, 기존 프로젝트에서 신규 프로젝트로의 다국어 기능 이식",
-          tags: ["5개 국어 적용", "공통 모듈"]
+          "title": "다국어 기능 도입 (2024.09 - 2024.12)",
+          "description": "기존 시스템에 다국어 기능을 제공하기 위한 사전 조사 및 테이블 설계, 다국어 데이터 저장을 위한 화면 구성, 기존 프로젝트에서 신규 프로젝트로의 다국어 기능 이식",
+          "tags": ["5개 국어 적용", "공통 모듈"]
         },
         {
-          title: "AICC 챗봇을 위한 RAG 구현 (2024.06 - 2025.02)",
-          description: "OpenSearch 템플릿 설계(Vector 필드 포함), Java로 구성한 색인 배치를 통해 효성 영업 업무일지 데이터를 OpenSearch에 1000만건 데이터 색인, FastAPI를 활용하여 Hybrid Search 구현",
-          tags: ["OpenSearch", "FastAPI", "RAG", "Docker"]
+          "title": "AICC 챗봇을 위한 RAG 구현 (2024.06 - 2025.02)",
+          "description": "OpenSearch 템플릿 설계(Vector 필드 포함), Java로 구성한 색인 배치를 통해 효성 영업 업무일지 데이터를 OpenSearch에 1000만건 데이터 색인, FastAPI를 활용하여 Hybrid Search 구현",
+          "tags": ["OpenSearch", "FastAPI", "RAG", "Docker"]
         },
         {
-          title: "KERIS NEIS Advisor 개발 (2024.01 - 2024.03)",
-          description: "콜 인프라 영역과 연계하여 상담 시 도움을 주는 화면 개발 (실시간 STT, 키워드 추천, KMS 내용 표출), 메시지큐(RabbitMQ)를 통한 실시간 데이터 처리",
-          tags: ["RabbitMQ", "WebSocket", "STT"]
+          "title": "KERIS NEIS Advisor 개발 (2024.01 - 2024.03)",
+          "description": "콜 인프라 영역과 연계하여 상담 시 도움을 주는 화면 개발 (실시간 STT, 키워드 추천, KMS 내용 표출), 메시지큐(RabbitMQ)를 통한 실시간 데이터 처리",
+          "tags": ["RabbitMQ", "WebSocket", "STT"]
         },
         {
-          title: "삼성전자 KMS 개발 (2023.08 - 2023.10)",
-          description: "상담전화를 위한 지식관리시스템 구축, 서버 세팅(nginx, tomcat, elasticsearch), DB 마이그레이션(Tibero → Oracle), 서버 분할 및 역할 변경에 따른 인프라 구성",
-          tags: ["Nginx", "Tomcat", "ElasticSearch", "Oracle", "KeepAlived"]
+          "title": "삼성전자 KMS 개발 (2023.08 - 2023.10)",
+          "description": "상담전화를 위한 지식관리시스템 구축, 서버 세팅(nginx, tomcat, elasticsearch), DB 마이그레이션(Tibero → Oracle), 서버 분할 및 역할 변경에 따른 인프라 구성",
+          "tags": ["Nginx", "Tomcat", "ElasticSearch", "Oracle", "KeepAlived"]
         },
         {
-          title: "질병관리청 KMS 개발 및 운영 (2022.03 - 2023.12)",
-          description: "콜센터 상담 간 정보 검색을 위한 웹 솔루션 개발, Restful API 개발, 컨텐츠를 ElasticSearch에 색인하는 배치 데몬 개발 및 운영",
-          tags: ["Spring", "ElasticSearch", "Tibero", "JavaScript"]
+          "title": "질병관리청 KMS 개발 및 운영 (2022.03 - 2023.12)",
+          "description": "콜센터 상담 간 정보 검색을 위한 웹 솔루션 개발, Restful API 개발, 컨텐츠를 ElasticSearch에 색인하는 배치 데몬 개발 및 운영",
+          "tags": ["Spring", "ElasticSearch", "Tibero", "JavaScript"]
         }
       ]
     },
     {
-      company: "(주)미리내닷컴",
-      title: "모니터링 사원",
-      duration: "2020.12 - 2022.03 (1년 4개월)",
-      description: "Shell Script를 활용한 신규 서버 세팅, 무중단 서버 문제 실시간 해결, 보안 관련 IP 차단 및 허용, 데이터센터와의 협업을 통한 하드웨어 관리",
-      tags: ["Linux", "Shell Script", "서버 관리"]
+      "company": "(주)미리내닷컴",
+      "title": "모니터링 사원",
+      "duration": "2020.12 - 2022.03 (1년 4개월)",
+      "description": "Shell Script를 활용한 신규 서버 세팅, 무중단 서버 문제 실시간 해결, 보안 관련 IP 차단 및 허용, 데이터센터와의 협업을 통한 하드웨어 관리",
+      "tags": ["Linux", "Shell Script", "서버 관리"]
     }
   ],
-  "skillsData" : [
+  "skillsData": [
     "Java", "Spring", "SpringBoot", "JavaScript", "Python",
     "ElasticSearch", "OpenSearch", "Oracle", "MySQL", "Tibero",
     "Docker", "Linux", "RabbitMQ", "FastAPI", "WebSocket", "Git"
   ],
-  "awardsData" : [
+  "awardsData": [
     {
-      title: "LG CNS AM Inspire Camp 3기",
-      date: "2025.07 - IT 인프라, 플랫폼, 클라우드 네이티브 환경 전환"
+      "title": "LG CNS AM Inspire Camp 3기",
+      "date": "2025.07 - IT 인프라, 플랫폼, 클라우드 네이티브 환경 전환"
     },
     {
-      title: "도커 및 쿠버네티스를 활용한 컨테이너 배포 및 운영기술",
-      date: "2024.08 - Docker, k8s 사용 및 활용"
+      "title": "도커 및 쿠버네티스를 활용한 컨테이너 배포 및 운영기술",
+      "date": "2024.08 - Docker, k8s 사용 및 활용"
     },
     {
-      title: "R과 Python을 활용한 소프트웨어 개발자 양성 과정",
-      date: "2020.06 - Spring, Mybatis, ML/DL 추천시스템"
+      "title": "R과 Python을 활용한 소프트웨어 개발자 양성 과정",
+      "date": "2020.06 - Spring, Mybatis, ML/DL 추천시스템"
     },
     {
-      title: "졸업작품 학술상",
-      date: "2019.10 - 도서위치 인식 및 운송로봇"
+      "title": "졸업작품 학술상",
+      "date": "2019.10 - 도서위치 인식 및 운송로봇"
     }
   ]
 }
