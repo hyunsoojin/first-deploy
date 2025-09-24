@@ -2,8 +2,8 @@
     "portfolio": [
         {
             "title": "First Deploy",
-            "summary": "Next.js 기본 템플릿 커스터마이징 및 Vercel 배포",
-            "url": ""
+            "summary": "Next.js와 TypeScript를 활용한 포트폴리오 및 이력서 웹사이트",
+            "url": "https://first-deploy-git-03-generalinfo-jin-hyunsoos-projects.vercel.app"
         }
     ]
 }
