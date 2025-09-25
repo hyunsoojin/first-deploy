@@ -1,11 +1,5 @@
-import Image from 'next/image';
-import Resume from './pages/resume';
+import MainPage from './pages/MainPage';
 
 export default function Home() {
-
-  return (
-    <>
-      <Resume />
-    </>
-  );
+  return <MainPage />;
 }

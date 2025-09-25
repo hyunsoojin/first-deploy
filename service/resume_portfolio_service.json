@@ -4,6 +4,11 @@
             "title": "First Deploy",
             "summary": "Next.js와 TypeScript를 활용한 포트폴리오 및 이력서 웹사이트",
             "url": "https://first-deploy-git-03-generalinfo-jin-hyunsoos-projects.vercel.app"
+        },
+        {
+            "title": "인스타그램 클론",
+            "summary" : "React, Spring boot를 활용한 인스타그램 클론 프로젝트",
+            "url": "https://github.com/LG-CNS-Mini/miniproj/tree/main/fe-instagram-clone"
         }
     ]
 }

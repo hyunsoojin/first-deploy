@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import axios from "axios";
+import Link from 'next/link';
 
 // 타입 정의
 interface Project {
@@ -117,6 +118,29 @@ const Subtitle = styled.p`
   opacity: 0.9;
   margin-bottom: 30px;
   animation: ${fadeInUp} 1s ease-out 0.3s both;
+`;
+
+const BackButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin-top: 30px;
+  animation: ${fadeInUp} 1s ease-out 0.8s both;
+
+  &:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
 `;
 
 const ContactLinks = styled.div`
@@ -418,6 +442,9 @@ function Resume() {
               <ContactLink href={`mailto:${email}`}>📧 Email</ContactLink>
               <ContactLink href={`${github}`} target="_blank">💻 GitHub</ContactLink>
             </ContactLinks>
+            <BackButton href="/">
+              ← 메인으로 돌아가기
+            </BackButton>
           </Header>
 
           {/* Main Content */}
