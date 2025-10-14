@@ -14,6 +14,11 @@
             "title" : "도서위치 인식 및 운송로봇",
             "summary" : "영상처리, 임베디드 시스템을 활용한 도서 위치 인식 및 운송 로봇",
             "url": "https://www.youtube.com/watch?v=DWEbbKUOWYM"
+        },
+        {
+            "title" : "효성ITX 포트폴리오",
+            "summary" : "VOC, KMS, Advisor, RAG 구현",
+            "url": "https://hyosungitx.notion.site/2f1d995e6b424185a2117e8c1b725193"
         }
     ]
 }
