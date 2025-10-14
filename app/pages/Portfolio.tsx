@@ -256,7 +256,7 @@ const Portfolio = () => {
   useEffect(() => {
     axios
       .get(
-        "https://raw.githubusercontent.com/hyunsoojin/first-deploy/refs/heads/0.3/general_info/service/resume_portfolio_service.json"
+        "https://raw.githubusercontent.com/hyunsoojin/first-deploy/refs/heads/main/service/resume_portfolio_service.json"
       )
       .then((res) => {
         console.log(res.data);
