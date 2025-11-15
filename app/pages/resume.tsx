@@ -407,7 +407,7 @@ function Resume() {
   useEffect(() => {
     axios
       .get(
-        "https://raw.githubusercontent.com/hyunsoojin/first-deploy/refs/heads/0.3/general_info/service/resume_general_info_service.json"
+        "https://raw.githubusercontent.com/hyunsoojin/first-deploy/refs/heads/main/service/resume_general_info_service.json"
       )
       .then((res) => {
         console.log(res.data);
