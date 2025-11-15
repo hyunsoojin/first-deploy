@@ -51,10 +51,6 @@
   ],
   "awardsData": [
     {
-      "title": "LG CNS AM Inspire Camp 3기",
-      "date": "2025.07 - IT 인프라, 플랫폼, 클라우드 네이티브 환경 전환"
-    },
-    {
       "title": "도커 및 쿠버네티스를 활용한 컨테이너 배포 및 운영기술",
       "date": "2024.08 - Docker, k8s 사용 및 활용"
     },
